@@ -61,14 +61,11 @@ img {
 }
 
 .card {
-    flex: 1;
-    margin: 0 10px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona um contorno sombreado */
     padding: 20px; /* Adiciona espaçamento interno para um layout mais agradável */
     background-color: #fff; /* Define um fundo branco para os cartões */
     border-radius: 8px; /* Adiciona cantos arredondados */
-    min-width: 300px; /* Define uma largura mínima para os cartões */
 }
 
 .card h2 {
@@ -108,6 +105,7 @@ h1 {
     font-size: 2.5em; /* Aumenta o tamanho do título */
     text-align: center; /* Centraliza o título */
     margin-bottom: 20px; /* Espaçamento abaixo do título */
+    width: 100%; /* Garante que o título ocupe toda a largura */
 }
 
 h2 {
@@ -115,12 +113,22 @@ h2 {
 }
 
 main {
-    display: flex; /* Utiliza flexbox */
-    flex-wrap: wrap; /* Permite quebra de linha para os cartões */
-    justify-content: center; /* Centraliza os cartões */
-    gap: 20px; /* Espaçamento entre os cartões */
+    display: grid; /* Utiliza o modelo de layout grid */
+    grid-template-columns: 1fr; /* Uma coluna para o título */
+    gap: 20px; /* Espaçamento entre as colunas */
     margin: 10px;
     background-color: #81818160;
+}
+
+#bigtitle {
+    grid-column: 1 / -1; /* Faz o título ocupar toda a largura */
+    text-align: center;
+}
+
+.cards-container {
+    display: grid; /* Utiliza o modelo de layout grid */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas para os cartões */
+    gap: 20px; /* Espaçamento entre as colunas */
 }
 
 /* footer */
