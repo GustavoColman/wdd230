@@ -7,9 +7,7 @@ Fonts are separated by a & */
   /* change the values below to your colors from your palette */
   --primary-color: #ffffff   ;
   --secondary-color: #949494 ;
-  --accent1-color: #e42209;
-  --accent2-color: rgb(255, 255, 255);
-
+  --accent-color: #e42209;
   /* change the values below to your chosen font(s) */
   --heading-font: "Oswald";
   --paragraph-font: "Open Sans", sans-serif;
@@ -86,12 +84,10 @@ p {
 .secondary {
   background-color: var(--secondary-color);
 }
-.accent1 {
-  background-color: var(--accent1-color);
+.accent{
+  background-color: var(--accent-color);
 }
-.accent2{
-  background-color: var(--accent2-color);
-}
+
 p.colored {
   background-color: var(--paragraph-background-color);
   color: var(--paragraph-color-on-color);
